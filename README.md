@@ -9,6 +9,8 @@
 ** CNN code 
 
 3) class_transition_matrix.py
-** dumps confusion matrix, acc, recall
+** dumps confusion matrix, acc, recal 
 
- 
+4)tensorflow.sh 
+
+**Shell script that runs the routing via agreement algorithm OR loads the saved weights and runs the test
