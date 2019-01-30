@@ -228,18 +228,7 @@ if __name__ == "__main__":
                                                   n_class=len(np.unique(np.argmax(y_train, 1))),
                                                   routings=args.routings)
     model.summary()
-    '''
-    # train or test
-    if args.weights is not None:  # init the model weights with provided one
-        model.load_weights(args.weights)
-    if not args.testing:
-        train(model=model, data=((x_train, y_train), (x_test, y_test)), args=args)
-    else:  # as long as weights are given, will run testing
-        if args.weights is None:
-            print('No weights are provided. Will test using random initialized weights.')
-    #    manipulate_latent(manipulate_model, (x_test, y_test), args)
-        test(model=eval_model, data=(x_test, y_test), args=args)
-    '''
+
 
     train(model=model, data=((x_train, y_train), (x_test, y_test)), args=args)
     test(model=eval_model, data=(x_test, y_test))
