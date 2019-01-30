@@ -1,3 +1,5 @@
+#### Thank you Xifeng Guo for keeping the spirit of open source alive!####
+
 import keras.backend as K
 import tensorflow as tf
 from keras import initializers, layers
@@ -180,14 +182,3 @@ def PrimaryCap(inputs, dim_capsule, n_channels, kernel_size, strides, padding):
     return layers.Lambda(squash, name='primarycap_squash')(outputs)
 
 
-"""
-# The following is another way to implement primary capsule layer. This is much slower.
-# Apply Conv2D `n_channels` times and concatenate all capsules
-def PrimaryCap(inputs, dim_capsule, n_channels, kernel_size, strides, padding):
-    outputs = []
-    for _ in range(n_channels):
-        output = layers.Conv2D(filters=dim_capsule, kernel_size=kernel_size, strides=strides, padding=padding)(inputs)
-        outputs.append(layers.Reshape([output.get_shape().as_list()[1] ** 2, dim_capsule])(output))
-    outputs = layers.Concatenate(axis=1)(outputs)
-    return layers.Lambda(squash)(outputs)
-"""
