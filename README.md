@@ -1,7 +1,8 @@
+
+
+**The implementation is heavily inspired from the open source contributions of Xifeng Guo.Thank You Guo! For keeping the spirit of open source alive!**
+
 ****This directory contains****
-
-**The implementation is heavily inspired from the open source contributions of Xifeng Guo**
-
 1) capsnet
 ** capsnetv2.py --- Routing with Agreement implementation
 ** capsulelayers.py-- Capsule layer implementation
